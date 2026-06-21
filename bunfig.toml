@@ -57,17 +57,17 @@ fields = ["name", "version", "description"]
 # Node.js compatibility mode
 compat = "node"
 
-# Loader configuration for file types
 loader = {
   ".css" = "css",
-  ".js" = "jsx", 
-  ".ts" = "tsx",
-  ".tsx" = "tsx",
-  ".json" = "json",
-  ".txt" = "text"
+".js" = "jsx", ".ts" = "tsx",
+".tsx" = "tsx",
+".json" = "json",
+# Loader configuration for file types
+
 }
 
-# Environment variables
+".txt" = "text"
 env = {
-  NODE_ENV = "development"
-}
+  # Environment variables
+
+}NODE_ENV = "development"

@@ -152,12 +152,22 @@ export default function App() {
 
 	if (notes.length === 0 && view === 'list') {
 		return (
-			<Box flexDirection="column" padding={1}>
-				<Text color="cyan" bold italic>
+			<Box
+				flexDirection="column"
+				padding={1}
+			>
+				<Text
+					color="cyan"
+					bold
+					italic
+				>
 					jot
 				</Text>
 				<Box marginY={1}>
-					<Text italic dimColor>
+					<Text
+						italic
+						dimColor
+					>
 						No notes found. Press 'n' to create one or 'p' to paste.
 					</Text>
 				</Box>
@@ -179,26 +189,49 @@ export default function App() {
 		})
 
 		return (
-			<Box flexDirection="column" padding={1}>
+			<Box
+				flexDirection="column"
+				padding={1}
+			>
 				<Box justifyContent="space-between">
-					<Text color="cyan" bold italic>
+					<Text
+						color="cyan"
+						bold
+						italic
+					>
 						jot
 					</Text>
 					<Box>
 						<Text dimColor>↑↓: Navigate | </Text>
-						<Text dimColor bold color="white">
+						<Text
+							dimColor
+							bold
+							color="white"
+						>
 							Enter
 						</Text>
 						<Text dimColor>: View | </Text>
-						<Text dimColor bold color="white">
+						<Text
+							dimColor
+							bold
+							color="white"
+						>
 							n
 						</Text>
 						<Text dimColor>: New | </Text>
-						<Text dimColor bold color="white">
+						<Text
+							dimColor
+							bold
+							color="white"
+						>
 							p
 						</Text>
 						<Text dimColor>: Paste | </Text>
-						<Text dimColor bold color="white">
+						<Text
+							dimColor
+							bold
+							color="white"
+						>
 							e
 						</Text>
 						<Text dimColor>: Menu</Text>
@@ -220,21 +253,33 @@ export default function App() {
 
 	if (view === 'detail' && selectedNote) {
 		return (
-			<Box flexDirection="column" padding={1}>
+			<Box
+				flexDirection="column"
+				padding={1}
+			>
 				<Box
 					borderStyle="round"
 					borderColor="cyan"
 					flexDirection="column"
 					paddingX={1}
 				>
-					<Box justifyContent="space-between" marginBottom={1}>
+					<Box
+						justifyContent="space-between"
+						marginBottom={1}
+					>
 						<Box>
 							{selectedNote.title && (
-								<Text bold color="cyan">
+								<Text
+									bold
+									color="cyan"
+								>
 									{selectedNote.title} -{' '}
 								</Text>
 							)}
-							<Text bold color="yellow">
+							<Text
+								bold
+								color="yellow"
+							>
 								{format(selectedNote.timestamp, 'PPPP p')}
 							</Text>
 						</Box>
@@ -261,8 +306,14 @@ export default function App() {
 		]
 
 		return (
-			<Box flexDirection="column" padding={1}>
-				<Text bold color="magenta">
+			<Box
+				flexDirection="column"
+				padding={1}
+			>
+				<Text
+					bold
+					color="magenta"
+				>
 					Note Actions
 				</Text>
 				<Box marginTop={1}>
@@ -291,9 +342,17 @@ export default function App() {
 
 	if (view === 'rename' && selectedNote) {
 		return (
-			<Box padding={1} flexDirection="column">
+			<Box
+				padding={1}
+				flexDirection="column"
+			>
 				<Text bold>Rename Note:</Text>
-				<Box marginTop={1} borderStyle="single" borderColor="cyan" paddingX={1}>
+				<Box
+					marginTop={1}
+					borderStyle="single"
+					borderColor="cyan"
+					paddingX={1}
+				>
 					<TextInput
 						value={renameValue}
 						onChange={setRenameValue}
@@ -309,8 +368,14 @@ export default function App() {
 
 	if (view === 'confirm-delete') {
 		return (
-			<Box padding={1} flexDirection="column">
-				<Text color="red" bold>
+			<Box
+				padding={1}
+				flexDirection="column"
+			>
+				<Text
+					color="red"
+					bold
+				>
 					Are you sure you want to delete this note?
 				</Text>
 				<Text dimColor>This action cannot be undone.</Text>

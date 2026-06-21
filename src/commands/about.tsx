@@ -3,7 +3,10 @@ import {Text, Box} from 'ink'
 
 export default function About() {
 	return (
-		<Box flexDirection="column" padding={1}>
+		<Box
+			flexDirection="column"
+			padding={1}
+		>
 			<Text bold>{pkg.description}</Text>
 			<Text>Version: {pkg.version}</Text>
 			<Text>Author: {pkg.author}</Text>
